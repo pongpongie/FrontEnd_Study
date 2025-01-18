@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/pageable@latest/dist/pageable.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .pg-wrapper {
+        box-sizing: content-box;
+      }
+
+      .page {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .page1 {
+        background-color: green;
+      }
+
+      .page2 {
+        background-color: blue;
+      }
+
+      .page3 {
+        background-color: orange;
+      }
+
+      .page4 {
+        background-color: yellowgreen;
+      }
+
+      .page5 {
+        background-color: peachpuff;
+      }
+
+      .video-background {
+        background-color: #06f2;
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .video-background video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .video-background .video-overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 48px;
+        color: white;
+        text-shadow: 0 1px #000;
+      }
+
+      .video-background .video-overlay h1 {
+        margin: 0;
+      }
+
+      .video-background .video-overlay p {
+        border-top: 1px solid #fff;
+        margin: 0;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div data-anchor="Page 1">
+        <div class="page page1 video-background">
+          <video src="assets/media/intro.mp4" autoplay muted loop></video>
+          <div class="video-overlay">
+            <h1 data-aos="fade-up" data-aos-duration="500">Hello, World!</h1>
+            <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+              Hello, World!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div data-anchor="Page 2">
+        <div class="page page2">
+          <h1>page 2</h1>
+        </div>
+      </div>
+      <div data-anchor="Page 3">
+        <div class="page page3">
+          <h1>page 3</h1>
+        </div>
+      </div>
+      <div data-anchor="Page 4">
+        <div class="page page4">
+          <h1>page 4</h1>
+        </div>
+      </div>
+      <div data-anchor="Page 5">
+        <div class="page page5">
+          <h1>page 5</h1>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+    <script>
+      AOS.init();
+      new Pageable(".container");
+    </script>
+  </body>
+</html>

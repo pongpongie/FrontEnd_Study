@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>window 객체</h1>
+    <h3>open 메소드 확인</h3>
+    <div>
+      <a href="#" id="link1">새 창 열기</a>
+      <br />
+      <a href="#" id="link2">팝업 창 열기 1</a>
+      <br />
+      <a href="#" id="link3">팝업 창 열기 2-1</a>
+      <br />
+      <a href="#" id="link4">팝업 창 열기 2-2</a>
+      <br />
+      <a href="./open.html">일반 링크</a>
+    </div>
+
+    <script>
+      document.querySelector("#link1").addEventListener("click", (e) => {
+        e.preventDefault();
+        window.open("open.html");
+      });
+
+      document.querySelector("#link2").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const popup = window.open(
+          "open.html",
+          "",
+          "width=300, height=500, scrollbars=no, toolbar=no, menubar=no, statis=no, location=no"
+        );
+      });
+
+      document.querySelector("#link3").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const popup = window.open(
+          "https://www.naver.com",
+          "mywin",
+          "width=300, height=500, scrollbars=no, toolbar=no, menubar=no, statis=no, location=no"
+        );
+      });
+
+      document.querySelector("#link4").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const popup = window.open(
+          "https://www.naver.com",
+          "mywin",
+          "width=300, height=500, scrollbars=no, toolbar=no, menubar=no, statis=no, location=no"
+        );
+      });
+    </script>
+  </body>
+</html>

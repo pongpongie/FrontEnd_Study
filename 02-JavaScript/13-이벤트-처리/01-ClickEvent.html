@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .event-box {
+        border: 5px solid #007;
+        background: #d5d5d5;
+        color: #009;
+        font-size: 32px;
+        padding: 50px 0;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="listener" class="event-box">Mouse Here!</div>
+
+    <script>
+      const eventBox = document.querySelector("#listener");
+
+      eventBox.addEventListener("click", function (e) {
+        e.currentTarget.innerHTML = "click event";
+
+        console.log(
+          "문서 기준 client x : " + e.clientX + ", client Y " + e.clientY
+        );
+        console.log(
+          "오브젝트 기준 offset x : " + e.offsetY + ", client Y " + e.offsetY
+        );
+        console.log(
+          "모니터 기준 screen x : " + e.screenX + ", client Y " + e.screenY
+        );
+      });
+
+      eventBox.addEventListener("dblclick", (e) => {
+        e.currentTarget.innerHTML = "Double clicked!!";
+      });
+
+      eventBox.addEventListener("mousemove", (e) => {
+        e.currentTarget.innerHTML = "mouse move";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+* {
+  font-family: "Noto Sans KR";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  .jumbotron {
+    padding: 80px;
+    text-align: center;
+    background-color: #1abc9c;
+    color: white;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+
+.navbar {
+  background-color: #333;
+  position: sticky;
+  top: 0;
+
+  div {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+
+    a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+
+      &.right {
+        margin-left: auto;
+      }
+
+      &:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      &.active {
+        background-color: #666;
+        color: white;
+      }
+    }
+  }
+}
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  background-color: #eee;
+  display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+
+  .side {
+    flex: 0 0 360px;
+    border-left: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
+
+    @media (max-width: 768px) {
+      flex: 1 1 100%;
+      border-left: 0px;
+      border-right: 0px;
+    }
+  }
+
+  .main {
+    flex: 1 1 100%;
+    background-color: white;
+    border-right: 1px solid #d5d5d5;
+
+    @media (max-width: 768px) {
+      border-right: 0px;
+    }
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .fakeimg {
+    background-color: #aaa;
+    width: auto;
+    padding: 20px;
+  }
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}

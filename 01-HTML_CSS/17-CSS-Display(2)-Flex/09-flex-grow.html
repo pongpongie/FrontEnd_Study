@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        border: 2px dotted #06f;
+        padding: 10px;
+        /* width: 500px; */
+
+        display: flex;
+
+        .item {
+          border: 2px solid #f0f;
+          padding: 10px;
+          margin: 5px;
+
+          &.grow0 {
+            flex-basis: 100px;
+            flex-grow: 0;
+          }
+
+          &.grow1 {
+            flex-basis: 100px;
+            flex-grow: 1; /* 다 채우라는 의미*/
+          }
+
+          &.item1 {
+            flex-grow: 1;
+          }
+          &.item2 {
+            flex-grow: 3;
+          }
+          &.left {
+            flex-basis: 150px;
+          }
+          &.right {
+            flex-grow: 1;
+          }
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>grow0</h1>
+    <div class="container">
+      <div class="item grow0">Normal contents.</div>
+      <div class="item grow0">Very~~~ Very~~~ Long contents</div>
+      <div class="item grow0">Short</div>
+    </div>
+
+    <h1>grow1</h1>
+    <div class="container">
+      <div class="item grow1">Normal contents.</div>
+      <div class="item grow1">Very~~~ Very~~~ Long contents</div>
+      <div class="item grow1">Short</div>
+    </div>
+
+    <h1>1 : 3 : 1</h1>
+    <div class="container">
+      <div class="item item1">A</div>
+      <div class="item item2">B</div>
+      <div class="item item1">C</div>
+    </div>
+
+    <h1>남은 공간을 가득 채우는 패턴 - 'flex-grow: 1' 사용</h1>
+    <div class="container">
+      <div class="item left">고정크기(flex-basis 사용)</div>
+      <div class="item right">남은 공간 채우기</div>
+    </div>
+  </body>
+</html>

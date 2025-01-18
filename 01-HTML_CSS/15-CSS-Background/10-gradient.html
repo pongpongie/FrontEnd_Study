@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css">
+      .grad1 {
+        width: 150px;
+        height: 150px;
+        background: -webkit-linear-gradient(0deg, #1301fe 0, #19f696 47%);
+      }
+
+      .grad2 {
+        width: 150px;
+        height: 150px;
+        background: -webkit-gradient(
+          linear,
+          0deg,
+          color-stop(0, 1301FE),
+          color-stop(65%, 19F696)
+        );
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>선형 그라데이션</h1>
+    <p>색상만 지정했을 때</p>
+    <div class="grad1"></div>
+    <p>방향을 지정했을 때</p>
+    <div class="grad2"></div>
+  </body>
+</html>

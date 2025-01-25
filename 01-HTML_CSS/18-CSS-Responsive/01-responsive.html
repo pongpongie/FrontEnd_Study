@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        .left {
+          background-color: #2196f3;
+          padding: 20px;
+
+          flex-basis: 20%;
+
+          @media screen and (max-width: 800px) {
+            flex-basis: 100%;
+          }
+        }
+
+        .main {
+          background-color: #f1f1f1;
+          padding: 20px;
+
+          flex-basis: 60%;
+
+          @media screen and (max-width: 800px) {
+            flex-basis: 100%;
+          }
+        }
+
+        .right {
+          background-color: #04aa6d;
+          padding: 20px;
+
+          flex-basis: 20%;
+
+          @media screen and (max-width: 800px) {
+            flex-basis: 100%;
+          }
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <p>Left Menu</p>
+      </div>
+
+      <div class="main">
+        <p>Main Content</p>
+      </div>
+
+      <div class="right">
+        <p>Right Content</p>
+      </div>
+    </div>
+  </body>
+</html>

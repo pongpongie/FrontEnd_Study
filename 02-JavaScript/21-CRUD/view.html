@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>학과 관리 ::: MySchool</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <dl>
+        <dt>학과번호</dt>
+        <dd class="id"></dd>
+        <dt>학과명</dt>
+        <dd class="dname"></dd>
+        <dt>학과위치</dt>
+        <dd class="loc"></dd>
+      </dl>
+      <a href="index.html">목록보기</a>
+      <a href="#" class="btn-edit">수정하기</a>
+      <a href="#" class="btn-delete">삭제하기</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="assets/js/AxiosHelper.js"></script>
+
+    <script>
+      (async () => {
+        const query = new URLSearchParams(location.search);
+        const params = Object.fromEntries(query);
+
+        if (!params.id) {
+          alert("학과번호가 없습니다");
+          history.back();
+          return;
+        }
+
+        let data = null;
+        try {
+          data = await axiosHelper.get(
+            `http://localhost:8080/department/${params.id}`
+          );
+        } catch (err) {
+          alert(err.message);
+          history.back();
+          return;
+        }
+
+        document.querySelector(".id").innerHTML = data.item.id;
+        document.querySelector(".dname").innerHTML = data.item.dname;
+        document.querySelector(".loc").innerHTML = data.item.loc;
+
+        document
+          .querySelector(".btn-edit")
+          .setAttribute("href", `edit.html?id=${data.item.id}`);
+        document
+          .querySelector(".btn-edit")
+          .setAttribute("href", `edit.html?id=${data.item.id}`);
+
+        const btnDelete = document.querySelector(".btn-delete");
+        btnDelete.dataset.id = data.item.id;
+        btnDelete.dataset.dname = data.item.dname;
+      })();
+
+      document
+        .querySelector(".btn-delete")
+        .addEventListener("click", async (e) => {
+          e.preventDefault();
+
+          const current = e.currentTarget;
+          const id = current.dataset.id;
+          const dname = current.dataset.dname;
+
+          if (confirm(`정말 ${dname}을(를) 삭제하시겠습니까?`)) {
+            try {
+              await axiosHelper.delete(
+                `http://localhost:8080/department/${id}`
+              );
+            } catch (err) {
+              alert(err.message);
+              return;
+            }
+            alert("삭제되었습니다");
+            window.location = "index.html";
+          }
+        });
+    </script>
+  </body>
+</html>

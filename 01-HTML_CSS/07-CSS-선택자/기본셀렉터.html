@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      h2 {
+        color: #0000ff;
+      }
+
+      h2.myclass {
+        color: #00ff00;
+      }
+
+      div > div > .myclass {
+        color: #ff0000;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>CSS 셀렉터를 알아봅시다</h1>
+      <p>셀렉터란? - CSS가 적용될 대상을 지정하는 방법</p>
+      <h2>나는 천재다</h2>
+      <div>
+        <h2 class="myclass">태그 셀렉터</h2>
+      </div>
+      <h2 class="myclass">태그 셀렉터</h2>
+      <p class="myclass">서로 다른 여러 개의 요소에 적용할 수 있다.</p>
+    </div>
+  </body>
+</html>

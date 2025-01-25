@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="comment" />
+    <button type="button" id="beforeBegin">beforeBegin</button>
+    <button type="button" id="afterEnd">afterEnd</button>
+    <button type="button" id="afterBegin">afterBegin</button>
+    <button type="button" id="beforeEnd">beforeEnd</button>
+    <hr />
+    <!-- 동적으로 JS가 생성한 HTML 요소가 추가될 위치 -->
+    <!-- beforebegin -->
+    <!-- beforeend -->
+
+    <ul id="list">
+      <!-- afterbegin -->
+      <!-- beforeend -->
+    </ul>
+    <!-- afterend -->
+  </body>
+
+  <script>
+    function remove(target) {
+      target.remove();
+    }
+
+    const list = document.querySelector("#list");
+
+    const comment = document.querySelector("#comment");
+
+    document.querySelector("#beforeBegin").addEventListener("click", (e) => {
+      list.insertAdjacentHTML(
+        "beforebegin",
+        "<p class='item beforebegin' onclick='remove(this)'>" +
+          comment.value +
+          "</p>"
+      );
+    });
+  </script>
+</html>

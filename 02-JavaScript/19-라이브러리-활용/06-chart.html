@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .subplot {
+        width: 50%;
+        padding: 10px;
+
+        &:first-child {
+          width: 100%;
+        }
+      }
+
+      .subplot-item {
+        width: 100%;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chart.js</h1>
+    <p>
+      <a href="https://www.chartjs.org">https://www.chartjs.org</a>
+    </p>
+    <hr />
+    <div class="container">
+      <div class="subplot">
+        <h2>기본 선 그래프</h2>
+        <div class="subplot-item">
+          <canvas id="mychart1"></canvas>
+        </div>
+      </div>
+      <div class="subplot">
+        <h2>기본 막대 그래프</h2>
+        <div class="subplot-item">
+          <canvas id="mychart2"></canvas>
+        </div>
+      </div>
+      <div class="subplot">
+        <h2>다중 막대 그래프</h2>
+        <div class="subplot-item">
+          <canvas id="mychart3"></canvas>
+        </div>
+      </div>
+      <div class="subplot">
+        <h2>파이 그래프</h2>
+        <div class="subplot-item">
+          <canvas id="mychart4"></canvas>
+        </div>
+      </div>
+      <div class="subplot">
+        <h2>polar area chart</h2>
+        <div class="subplot-item">
+          <canvas id="mychart5"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+
+    <script>
+      const names = ["철수", "영희", "민수", "수현", "호영"];
+      const kor = [98, 88, 92, 63, 71];
+      const eng = [48, 77, 89, 73, 80];
+      const math = [99, 80, 100, 95, 90];
+
+      const mychart1 = document.getElementById("mychart1");
+      const mychart2 = document.getElementById("mychart2");
+      const mychart3 = document.getElementById("mychart3");
+      const mychart4 = document.getElementById("mychart4");
+      const mychart5 = document.getElementById("mychart5");
+
+      new Chart(mychart1, {
+        type: "line",
+        data: {
+          labels: names,
+          datasets: [
+            {
+              label: "국어",
+              data: kor,
+              borderWidth: 1,
+              borderColor: "#ff6600",
+            },
+            {
+              label: "영어",
+              data: eng,
+              borderWidth: 1,
+              borderColor: "#ff00ff",
+            },
+          ],
+        },
+        options: {
+          maintainAspectRatio: false,
+        },
+      });
+
+      new Chart(mychart2, {
+        type: "bar",
+        data: {
+          labels: names,
+          datasets: [
+            {
+              label: "국어",
+              data: kor,
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>

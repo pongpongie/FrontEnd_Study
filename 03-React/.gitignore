@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# example files
+**/pages/**/*.png
+
 # node_modules
 node_modules
 
@@ -7,13 +10,13 @@ node_modules
 package.json
 
 # yarn
-.yarn/*
-!.yarn/cache
-!.yarn/patches
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
+**/.yarn/*
+!**/.yarn/cache
+!**/.yarn/patches
+!**/.yarn/releases
+!**/.yarn/plugins
+!**/.yarn/sdks
+!**/.yarn/versions
 
 # dependencies
 /node_modules

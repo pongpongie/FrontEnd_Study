@@ -9,6 +9,9 @@ import GlobalStyles from "./components/GlobalStyles";
 import InlineCss from "./pages/inline_css";
 import CssClass from "./pages/css_class";
 import CssModule from "./pages/css_module";
+import StyledComponent from "./pages/styled_component";
+import Responsive from "./pages/responsive";
+import News from "./pages/news";
 
 const MenuBar = styled.nav`
   .menu-item {
@@ -17,28 +20,28 @@ const MenuBar = styled.nav`
     text-decoration: none;
     padding-bottom: 2px;
     color: #222;
-  }
 
-  &:hover {
-    color: #22b8cf;
-  }
-
-  &:after {
-    content: "|";
-    display: inline-block;
-    padding: 0 7px;
-    color: #ccc;
-  }
-
-  &:last-child {
-    &:after {
-      color: #fff;
+    &:hover {
+      color: #22b8cf;
     }
-  }
 
-  &.active {
-    text-decoration: underline;
-    color: #22b8cf;
+    &:after {
+      content: "|";
+      display: inline-block;
+      padding: 0 7px;
+      color: #ccc;
+    }
+
+    &:last-child {
+      &:after {
+        color: #fff;
+      }
+    }
+
+    &.active {
+      text-decoration: underline;
+      color: #22b8cf;
+    }
   }
 `;
 
@@ -58,7 +61,7 @@ function App() {
         <NavLink className="menu-item" to="/css_module">
           CssModule
         </NavLink>
-        {/* <NavLink className="menu-item" to="/styled_component">
+        <NavLink className="menu-item" to="/styled_component">
           StyledComponent
         </NavLink>
         <NavLink className="menu-item" to="/responsive">
@@ -66,7 +69,7 @@ function App() {
         </NavLink>
         <NavLink className="menu-item" to="/news">
           News(Demo)
-        </NavLink> */}
+        </NavLink>
       </MenuBar>
 
       <hr />
@@ -75,9 +78,9 @@ function App() {
         <Route path="/inline_css" element={<InlineCss />} />
         <Route path="/css_class" element={<CssClass />} />
         <Route path="/css_module" element={<CssModule />} />
-        {/* <Route path="/styled_component" element={<StyledComponent />} />
+        <Route path="/styled_component" element={<StyledComponent />} />
         <Route path="/responsive" element={<Responsive />} />
-        <Route path="/news" element={<News />} /> */}
+        <Route path="/news" element={<News />} />
       </Routes>
     </>
   );

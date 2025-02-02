@@ -80,7 +80,7 @@ function App() {
         <Route path="/css_module" element={<CssModule />} />
         <Route path="/styled_component" element={<StyledComponent />} />
         <Route path="/responsive" element={<Responsive />} />
-        <Route path="/news" element={<News />} />
+        <Route path="/news/*" element={<News />} />
       </Routes>
     </>
   );

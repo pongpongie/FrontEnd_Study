@@ -36,14 +36,13 @@ const MyBox = styled.div`
     color: #fff;
   }
 
-  ${(props) => {
+  ${(props) =>
     props.number % 2 === 1 &&
-      css`
-        font-weight: bold;
-        font-style: italic;
-        text-decoration: underline;
-      `;
-  }}
+    css`
+      font-weight: bold;
+      font-style: italic;
+      text-decoration: underline;
+    `};
 `;
 
 const StyledComponent = () => {

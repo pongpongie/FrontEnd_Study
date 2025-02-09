@@ -19,6 +19,58 @@ const DateRange1 = memo(() => {
       <h3>
         {myDate.startDate} ~ {myDate.endDate}
       </h3>
+      <div>
+        <button
+          type="button"
+          onClick={(e) => {
+            const newDate = { ...myDate };
+            newDate.startDate = day.add(-15, "d").format("YYYY-MM-DD");
+            setMydate(newDate);
+          }}
+        >
+          15일
+        </button>
+        <button
+          type="button"
+          onClick={(e) => {
+            const newDate = { ...myDate };
+            newDate.startDate = day.add(-1, "M").format("YYYY-MM-DD");
+            setMydate(newDate);
+          }}
+        >
+          1개월
+        </button>
+        <button
+          type="button"
+          onClick={(e) => {
+            const newDate = { ...myDate };
+            newDate.startDate = day.add(-3, "M").format("YYYY-MM-DD");
+            setMydate(newDate);
+          }}
+        >
+          3개월
+        </button>
+        <button
+          type="button"
+          onClick={(e) => {
+            const newDate = { ...myDate };
+            newDate.startDate = day.add(-6, "M").format("YYYY-MM-DD");
+            setMydate(newDate);
+          }}
+        >
+          6개월
+        </button>
+        <button
+          type="button"
+          onClick={(e) => {
+            const newDate = { ...myDate };
+            newDate.startDate = day.add(-6, "M").format("YYYY-MM-DD");
+            setMydate(newDate);
+          }}
+        >
+          1년
+        </button>
+      </div>
     </DateRange1Container>
   );
 });

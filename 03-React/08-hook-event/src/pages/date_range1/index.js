@@ -15,7 +15,7 @@ const DateRange1 = memo(() => {
   });
   return (
     <DateRange1Container>
-      <h2>DateChange2</h2>
+      <h2>DateChange1</h2>
       <h3>
         {myDate.startDate} ~ {myDate.endDate}
       </h3>

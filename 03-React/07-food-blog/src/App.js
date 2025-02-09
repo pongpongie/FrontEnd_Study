@@ -13,7 +13,7 @@ import { Reset } from "styled-reset";
 import GlobalStyles from "./components/GlobalStyles";
 
 /** 하위 페이지를 담당하는 컴포넌트(직접제작)들 참조 */
-// ToDo ...
+import Main from "./pages/main";
 
 const App = memo(() => {
   return (
@@ -21,15 +21,8 @@ const App = memo(() => {
       <Meta />
       <Reset />
       <GlobalStyles />
-      <h1>07-food-blog</h1>
-      <hr />
-
-      {/* ---- 링크 구성 부분 --- */}
-      <nav>{/* ToDo ...  */}</nav>
-
-      {/* ---- 페이지 역할을 할 컴포넌트를 명시하기 --- */}
       <Routes>
-        {/* <Route path="__DEFINE_URL__" element={<__COMPONENT_NAME__ />} /> */}
+        <Route path="/" exact={true} element={<Main />}></Route>
       </Routes>
     </>
   );

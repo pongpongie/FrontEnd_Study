@@ -49,7 +49,7 @@ const App = memo(() => {
         <Route path="/tab_ex2" element={<TabEx2 />}></Route>
         <Route path="/submenu_ex" element={<SubmenuEx />}></Route>
         <Route path="/collapse_ex" element={<CollapseEx />}></Route>
-        <Route path="/createelement_ex" element={<CreateElementEx />}></Route>
+        <Route path="/create_element_ex" element={<CreateElementEx />}></Route>
       </Routes>
     </>
   );

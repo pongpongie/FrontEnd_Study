@@ -16,6 +16,7 @@ import GlobalStyles from "./components/GlobalStyles";
 import ImageEx from "./pages/image_ex/index";
 import StyleEx from "./pages/style_ex/index";
 import TabEx from "./pages/tab_ex/index";
+import TabEx2 from "./pages/tab_ex/index2";
 import SubmenuEx from "./pages/submenu_ex/index";
 import CollapseEx from "./pages/collapse_ex/index";
 import CreateElementEx from "./pages/create_element_ex/index";
@@ -34,6 +35,7 @@ const App = memo(() => {
         <MenuLink to="/image_ex">ImageEx</MenuLink>
         <MenuLink to="/style_ex">StyleEx</MenuLink>
         <MenuLink to="/tab_ex">TabEx</MenuLink>
+        <MenuLink to="/tab_ex2">TabEx2</MenuLink>
         <MenuLink to="/submenu_ex">SubmenuEx</MenuLink>
         <MenuLink to="/collapse_ex">CollapseEx</MenuLink>
         <MenuLink to="/create_element_ex">CreateElementEx</MenuLink>
@@ -44,6 +46,7 @@ const App = memo(() => {
         <Route path="/image_ex" element={<ImageEx />}></Route>
         <Route path="/style_ex" element={<StyleEx />}></Route>
         <Route path="/tab_ex" element={<TabEx />}></Route>
+        <Route path="/tab_ex2" element={<TabEx2 />}></Route>
         <Route path="/submenu_ex" element={<SubmenuEx />}></Route>
         <Route path="/collapse_ex" element={<CollapseEx />}></Route>
         <Route path="/createelement_ex" element={<CreateElementEx />}></Route>

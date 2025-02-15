@@ -1,6 +1,8 @@
-import React, { memo, useCallback, useState } from "react";
+import React, { memo, useCallback, useState, useMemo } from "react";
 
 import styled from "styled-components";
+
+import classnames from "classnames";
 
 import { tabContent } from "../../dataset";
 
@@ -36,18 +38,15 @@ const TabEx = memo(() => {
   const onTabButtonClick = useCallback((e) => {
     e.preventDefault();
 
-    // only JS
-    // document.querySelectorAll(".tab-button").forEach((v, i) => {
-    //   if (e.currentTarget == v) {
-    //     v.classList.add("active");
-    //   } else {
-    //     v.classList.remove("active");
-    //   }
-    // });
-
     const index = e.currentTarget.dataset.index;
+    console.log("before -->", tabIndex);
     setTabIndex(index);
+    console.log("after -->", tabIndex);
   }, []);
+
+  const { subject, content } = useMemo(() => {
+    return tabContent[tabIndex];
+  }, [tabIndex]);
 
   return (
     <TabExContainer>
@@ -55,29 +54,22 @@ const TabEx = memo(() => {
 
       <div className="tab-button-group">
         {tabContent.map((v, i) => {
-          if (tabIndex == i) {
-            return (
-              <a
-                key={`#${v.id}`}
-                data-index={i}
-                className="active tab-button"
-                onClick={onTabButtonClick}
-              >
-                {v.subject}
-              </a>
-            );
-          } else {
-            return (
-              <a
-                key={`#${v.id}`}
-                data-index={i}
-                className="tab-button"
-                onClick={onTabButtonClick}
-              >
-                {v.subject}
-              </a>
-            );
-          }
+          const mycls = classnames({
+            "tab-button": true,
+            active: tabIndex === i,
+          });
+
+          return (
+            <a
+              key={i}
+              href={`#${v.id}`}
+              data-index={i}
+              className={mycls}
+              onClick={onTabButtonClick}
+            >
+              {v.subject}
+            </a>
+          );
         })}
       </div>
 

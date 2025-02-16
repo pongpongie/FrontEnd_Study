@@ -14,11 +14,17 @@ __metadata:
     "@testing-library/jest-dom": "npm:^6.6.3"
     "@testing-library/react": "npm:^16.1.0"
     "@testing-library/user-event": "npm:^13.2.1"
+    aos: "npm:^2.3.4"
     axios: "npm:^1.7.9"
+    chart.js: "npm:^4.4.7"
     classnames: "npm:^2.5.1"
     dayjs: "npm:^1.11.13"
+    fslightbox-react: "npm:^1.7.6"
+    lodash: "npm:^4.17.21"
     prop-types: "npm:^15.8.1"
     react: "npm:^19.0.0"
+    react-chartjs-2: "npm:^5.3.0"
+    react-countup: "npm:^6.5.3"
     react-dom: "npm:^19.0.0"
     react-helmet-async: "npm:^2.0.5"
     react-intersection-observer: "npm:^9.15.1"
@@ -26,11 +32,14 @@ __metadata:
     react-redux: "npm:^9.2.0"
     react-router-dom: "npm:^7.1.5"
     react-scripts: "npm:5.0.1"
+    react-simple-image-slider: "npm:^2.4.1"
     react-snap: "npm:^1.23.0"
     redux-devtools-extension: "npm:^2.13.9"
     styled-components: "npm:^6.1.15"
     styled-components-breakpoints: "npm:^1.1.1"
     styled-reset: "npm:^4.5.2"
+    sweetalert2: "npm:^11.16.1"
+    sweetalert2-react-content: "npm:^5.1.0"
     web-vitals: "npm:^2.1.0"
   languageName: unknown
   linkType: soft
@@ -2206,6 +2215,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@kurkle/color@npm:^0.3.0":
+  version: 0.3.4
+  resolution: "@kurkle/color@npm:0.3.4"
+  checksum: 10c0/0e9fd55c614b005c5f0c4c755bca19ec0293bc7513b4ea3ec1725234f9c2fa81afbc78156baf555c8b9cb0d305619253c3f5bca016067daeebb3d00ebb4ea683
+  languageName: node
+  linkType: hard
+
 "@leichtgewicht/ip-codec@npm:^2.0.1":
   version: 2.0.5
   resolution: "@leichtgewicht/ip-codec@npm:2.0.5"
@@ -3653,6 +3669,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"aos@npm:^2.3.4":
+  version: 2.3.4
+  resolution: "aos@npm:2.3.4"
+  dependencies:
+    classlist-polyfill: "npm:^1.0.3"
+    lodash.debounce: "npm:^4.0.6"
+    lodash.throttle: "npm:^4.0.1"
+  checksum: 10c0/8448609a2de91d46361881210163162835d39369b35c291d6511b48816948b0f97ef278fe3e2541ac09ad34d3235f9d81c21188767643ca2f7778061eded7905
+  languageName: node
+  linkType: hard
+
 "arg@npm:^5.0.2":
   version: 5.0.2
   resolution: "arg@npm:5.0.2"
@@ -4495,6 +4522,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chart.js@npm:^4.4.7":
+  version: 4.4.7
+  resolution: "chart.js@npm:4.4.7"
+  dependencies:
+    "@kurkle/color": "npm:^0.3.0"
+  checksum: 10c0/9db499993c561f11184112003956ba96cf00513e025f58846be36e75ebddc6cbab2f93626c3734c305bc801e9362a9ef193b9591e679c59903b2ecb48cfcb317
+  languageName: node
+  linkType: hard
+
 "check-types@npm:^11.2.3":
   version: 11.2.3
   resolution: "check-types@npm:11.2.3"
@@ -4560,6 +4596,13 @@ __metadata:
   version: 1.4.3
   resolution: "cjs-module-lexer@npm:1.4.3"
   checksum: 10c0/076b3af85adc4d65dbdab1b5b240fe5b45d44fcf0ef9d429044dd94d19be5589376805c44fb2d4b3e684e5fe6a9b7cf3e426476a6507c45283c5fc6ff95240be
+  languageName: node
+  linkType: hard
+
+"classlist-polyfill@npm:^1.0.3":
+  version: 1.2.0
+  resolution: "classlist-polyfill@npm:1.2.0"
+  checksum: 10c0/97a6c6865daa1f74e6219f24bb5971c6b418aa9dcec0dcaab38283dbd9388af1c0057e9bd281b7236959059d971c55705bc055ee8382ee89f0c2d70749794cf3
   languageName: node
   linkType: hard
 
@@ -4919,6 +4962,13 @@ __metadata:
     path-type: "npm:^4.0.0"
     yaml: "npm:^1.10.0"
   checksum: 10c0/b923ff6af581638128e5f074a5450ba12c0300b71302398ea38dbeabd33bbcaa0245ca9adbedfcf284a07da50f99ede5658c80bb3e39e2ce770a99d28a21ef03
+  languageName: node
+  linkType: hard
+
+"countup.js@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "countup.js@npm:2.8.0"
+  checksum: 10c0/793c2de67a585d708cb7f7e25ea0c9bc17e6e76cf724e34babdd5325b5602bd6882a00510d59e0f1f2fd14e69f882260e08780fa0662741df2abe0feaceda51f
   languageName: node
   linkType: hard
 
@@ -7026,6 +7076,17 @@ __metadata:
   dependencies:
     node-gyp: "npm:latest"
   conditions: os=darwin
+  languageName: node
+  linkType: hard
+
+"fslightbox-react@npm:^1.7.6":
+  version: 1.7.6
+  resolution: "fslightbox-react@npm:1.7.6"
+  peerDependencies:
+    prop-types: ">=15.6.2"
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 10c0/24e8c3915b9d7a4f250586e357661ebe6b120d3233ba79f36e54c6434730c9d823edd9eaa91fa9b6eb87e4214204375f005afb63cdfa15fe5389fe79303f42a2
   languageName: node
   linkType: hard
 
@@ -9234,7 +9295,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.debounce@npm:^4.0.8":
+"lodash.debounce@npm:^4.0.6, lodash.debounce@npm:^4.0.8":
   version: 4.0.8
   resolution: "lodash.debounce@npm:4.0.8"
   checksum: 10c0/762998a63e095412b6099b8290903e0a8ddcb353ac6e2e0f2d7e7d03abd4275fe3c689d88960eb90b0dde4f177554d51a690f22a343932ecbc50a5d111849987
@@ -9259,6 +9320,13 @@ __metadata:
   version: 4.7.0
   resolution: "lodash.sortby@npm:4.7.0"
   checksum: 10c0/fc48fb54ff7669f33bb32997cab9460757ee99fafaf72400b261c3e10fde21538e47d8cfcbe6a25a31bcb5b7b727c27d52626386fc2de24eb059a6d64a89cdf5
+  languageName: node
+  linkType: hard
+
+"lodash.throttle@npm:^4.0.1":
+  version: 4.1.1
+  resolution: "lodash.throttle@npm:4.1.1"
+  checksum: 10c0/14628013e9e7f65ac904fc82fd8ecb0e55a9c4c2416434b1dd9cf64ae70a8937f0b15376a39a68248530adc64887ed0fe2b75204b2c9ec3eea1cb2d66ddd125d
   languageName: node
   linkType: hard
 
@@ -11562,6 +11630,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-chartjs-2@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "react-chartjs-2@npm:5.3.0"
+  peerDependencies:
+    chart.js: ^4.1.1
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/4415d40217c084a49f9a936fbd30f67e0e705148e6f8359bec65601033d1076f31085c45793839fc29ec833e6c427b0bf9861a0c54c432c08d35bc9590ffa41a
+  languageName: node
+  linkType: hard
+
+"react-countup@npm:^6.5.3":
+  version: 6.5.3
+  resolution: "react-countup@npm:6.5.3"
+  dependencies:
+    countup.js: "npm:^2.8.0"
+  peerDependencies:
+    react: ">= 16.3.0"
+  checksum: 10c0/d18beba2a7dc5f2dce346d47c90e76570f862a7f49acb7ad73028acfd584f691c84dde3b1c8743181d158636a20a7b9201ad8c6c8b4d310ff02ca68eaccf997f
+  languageName: node
+  linkType: hard
+
 "react-dev-utils@npm:^12.0.1":
   version: 12.0.1
   resolution: "react-dev-utils@npm:12.0.1"
@@ -11799,6 +11888,13 @@ __metadata:
   bin:
     react-scripts: bin/react-scripts.js
   checksum: 10c0/1776e7139261019eb4a2adece8fb997913040c6b4e9170902ffed95c3ff311ded623189bb1582ecddb3a5a15d6afd871fb68dbed72080d50f635e31c4ff5fff5
+  languageName: node
+  linkType: hard
+
+"react-simple-image-slider@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "react-simple-image-slider@npm:2.4.1"
+  checksum: 10c0/111b907f59ae1b5e49aae997a0f84eb5e445b3268275d8a0f4491f509cd59e5c370bead76993df84ca18e7a6a2f2e74ed6f26d3dafcbb4c5c403819cfc1feefe
   languageName: node
   linkType: hard
 
@@ -13346,6 +13442,24 @@ __metadata:
   bin:
     svgo: bin/svgo
   checksum: 10c0/0741f5d5cad63111a90a0ce7a1a5a9013f6d293e871b75efe39addb57f29a263e45294e485a4d2ff9cc260a5d142c8b5937b2234b4ef05efdd2706fb2d360ecc
+  languageName: node
+  linkType: hard
+
+"sweetalert2-react-content@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "sweetalert2-react-content@npm:5.1.0"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    sweetalert2: ^11.0.0
+  checksum: 10c0/bf4bed1302beb5650e4036b9ba5e9af1e284d7a60061f98b671eaecad998198d622fa0a9fc337f08e6488559913ab0bb2a43a62bb1d22e1d88de0d6946c662a1
+  languageName: node
+  linkType: hard
+
+"sweetalert2@npm:^11.16.1":
+  version: 11.16.1
+  resolution: "sweetalert2@npm:11.16.1"
+  checksum: 10c0/5742e84cf77c558918224af9fd0d048d0671f0f08faf337ff62dcfa328f2eda30eab06410a4445b2bf6ab5a5eb6944c93073c0d8b4109337bb417780e5b338c7
   languageName: node
   linkType: hard
 

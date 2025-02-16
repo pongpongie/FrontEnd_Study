@@ -108,6 +108,63 @@ const FsLightboxEx = memo(() => {
           ]}
         />
       </div>
+      <h2>Youtube Multi link</h2>
+      <div>
+        <button
+          className="btn"
+          onClick={(e) =>
+            setYoutubeMultiToggler({
+              open: !youtubeMultiToggler.open,
+              index: 1,
+            })
+          }
+        >
+          <img
+            src="https://img.youtube.com/vi/MFqfFUTGp2M/maxresdefault.jpg"
+            alt=""
+            width={150}
+          />
+        </button>
+        <button
+          className="btn"
+          onClick={(e) =>
+            setYoutubeMultiToggler({
+              open: !youtubeMultiToggler.open,
+              index: 2,
+            })
+          }
+        >
+          <img
+            src="https://img.youtube.com/vi/h_y2XaUmBIE/maxresdefault.jpg"
+            alt=""
+            width={150}
+          />
+        </button>
+        <button
+          className="btn"
+          onClick={(e) =>
+            setYoutubeMultiToggler({
+              open: !youtubeMultiToggler.open,
+              index: 3,
+            })
+          }
+        >
+          <img
+            src="https://img.youtube.com/vi/HvVHShjqO_c/maxresdefault.jpg"
+            alt=""
+            width={150}
+          />
+        </button>
+      </div>
+      <FsLightBox
+        toggler={youtubeMultiToggler.open}
+        sources={[
+          "https://www.youtube.com/watch?v=MFqfFUTGp2M&ab_channel=isn%27tart%3F",
+          "https://www.youtube.com/watch?v=h_y2XaUmBIE&ab_channel=isn%27tart%3F",
+          "https://www.youtube.com/watch?v=HvVHShjqO_c&ab_channel=isn%27tart%3F",
+        ]}
+        slide={youtubeMultiToggler.index}
+      />
     </FsLightboxExContainer>
   );
 });

@@ -11,7 +11,7 @@ import CssClass from "./pages/css_class";
 import CssModule from "./pages/css_module";
 import StyledComponent from "./pages/styled_component";
 import Responsive from "./pages/responsive";
-import News from "./pages/news";
+import News from "../../11-simple-ajax/src/pages/news";
 
 const MenuBar = styled.nav`
   .menu-item {

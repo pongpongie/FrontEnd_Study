@@ -5,12 +5,18 @@ import NewsList from "./NewsList";
 
 import axiosHelper from "../../helpers/AxiosHelper";
 
+import { Blocks } from "react-loader-spinner";
+
 const News = () => {
   const [newsData, setNewsData] = useState([]);
+
+  const [loading, setLoading] = useState([]);
 
   useEffect(() => {
     (async () => {
       let data = null;
+
+      setLoading(true);
 
       try {
         data = await axiosHelper.get("/news");
@@ -21,6 +27,8 @@ const News = () => {
       console.log(data.item);
 
       setNewsData(data.item);
+
+      setLoading(false);
     })();
   }, []);
 
@@ -31,6 +39,22 @@ const News = () => {
         <Link to="/news/card">카드형</Link>
         <Link to="/news/list">리스트형</Link>
       </nav>
+
+      <Blocks
+        height="100"
+        width="100"
+        ariaLabel="blocks-loading"
+        wrapperStyle={{
+          position: "fixed",
+          zIndex: 9999,
+          left: "50%",
+          top: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+        wrapperClass="blocks-wrapper"
+        visible={loading}
+      />
+
       <Routes>
         <Route path="card" element={<NewsCard news={newsData} />} />
         <Route path="list" element={<NewsList news={newsData} />} />

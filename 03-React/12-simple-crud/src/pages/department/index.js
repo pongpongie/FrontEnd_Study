@@ -97,7 +97,7 @@ const Department = memo(() => {
             return (
               <tr key={v.id}>
                 <td>{v.id}</td>
-                {/* {keyword ? (
+                {keyword ? (
                   <td
                     dangerouslySetInnerHTML={{
                       __html: v.dname.replaceAll(
@@ -106,9 +106,9 @@ const Department = memo(() => {
                       ),
                     }}
                   ></td>
-                ) : ( */}
-                <td>{v.dname}</td>
-                {/* )} */}
+                ) : (
+                  <td>{v.dname}</td>
+                )}
 
                 <td>{v.loc}</td>
                 <td>수정</td>

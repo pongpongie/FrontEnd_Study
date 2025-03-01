@@ -2,10 +2,12 @@ import React, { memo, useEffect } from "react";
 
 import styled from "styled-components";
 
-import Spinner from "../../components/Spinner";
-
 import { useSelector, useDispatch } from "react-redux";
 import { getList } from "../../slices/TitanicSlice";
+
+import Spinner from "../../components/Spinner";
+import GraphBoard from "./GraphBoard";
+import ScoreBoard from "./ScoreBoard";
 
 const DashboardContainer = styled.div`
   .error-info {
@@ -50,7 +52,10 @@ const Dashboard = memo(() => {
         </div>
       )}
 
-      {item && <p>{JSON.stringify(item)}</p>}
+      <ScoreBoard />
+
+      <GraphBoard />
+      {/* {item && <p>{JSON.stringify(item)}</p>} */}
     </DashboardContainer>
   );
 });

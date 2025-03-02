@@ -1,10 +1,10 @@
-import { CreateAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 import axiosHelper from "../helpers/AxiosHelper";
 import reduxHelper from "../helpers/ReduxHelper";
 
 const API_URL = "/professor";
 
-export const getList = CreateAsyncThunk(
+export const getList = createAsyncThunk(
   "ProfessorSlice/getList",
   async (payload, { rejectWithValue }) => {
     let result = null;
@@ -23,7 +23,7 @@ export const getList = CreateAsyncThunk(
   }
 );
 
-export const getItem = CreateAsyncThunk(
+export const getItem = createAsyncThunk(
   "ProfessorSlice/getItem",
   async (payload, { rejectWithValue }) => {
     let result = null;
@@ -37,7 +37,7 @@ export const getItem = CreateAsyncThunk(
   }
 );
 
-export const postItem = CreateAsyncThunk(
+export const postItem = createAsyncThunk(
   "ProfessorSlice/postItem",
 
   async (payload, { rejectWithValue }) => {
@@ -62,7 +62,7 @@ export const postItem = CreateAsyncThunk(
   }
 );
 
-export const putItem = CreateAsyncThunk(
+export const putItem = createAsyncThunk(
   "ProfessorSlice/putItem",
 
   async (payload, { rejectWithValue }) => {
@@ -87,7 +87,7 @@ export const putItem = CreateAsyncThunk(
   }
 );
 
-export const deleteItem = CreateAsyncThunk(
+export const deleteItem = createAsyncThunk(
   "ProfessorSlice/deleteItem",
 
   async (payload, { rejectWithValue }) => {

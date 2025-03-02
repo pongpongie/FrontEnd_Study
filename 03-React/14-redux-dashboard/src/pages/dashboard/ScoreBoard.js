@@ -6,6 +6,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 import CountUp from "react-countup";
 
+import mq from "../../components/MediaQuery";
+
 const ScoreBoardContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -32,10 +34,17 @@ const ScoreBoardContainer = styled.div`
 
     h2 {
       font-size: 29px;
-      font-weight: 600;
       margin: 0;
+      font-weight: normal;
       color: #fff;
       margin-bottom: 10px;
+
+      ${mq.maxWidth("lg")`
+          font-size: 15px
+        `}
+      ${mq.maxWidth("md")`
+          font-size: 10px
+        `}
     }
 
     .my-counter-number {
@@ -81,7 +90,7 @@ const ScoreBoard = memo(() => {
           enableScrollSpy={true}
           scrollSpyDelay={1000}
           className="my-counter-number"
-        ></CountUp>
+        />
       </div>
       <div className="my-counter">
         <h2>생존자 수</h2>
@@ -93,7 +102,7 @@ const ScoreBoard = memo(() => {
           enableScrollSpy={true}
           scrollSpyDelay={1000}
           className="my-counter-number"
-        ></CountUp>
+        />
       </div>
       <div className="my-counter">
         <h2>사망자 수</h2>
@@ -104,7 +113,7 @@ const ScoreBoard = memo(() => {
           startOnMount={false}
           enableScrollSpy={true}
           className="my-counter-number"
-        ></CountUp>
+        />
       </div>
       <div className="my-counter">
         <h2>생존율</h2>
@@ -112,10 +121,10 @@ const ScoreBoard = memo(() => {
           start={1}
           end={survivalRate}
           duration={5}
-          enableScrollSpy={true}
           startOnMount={false}
+          enableScrollSpy={true}
           className="my-counter-number per"
-        ></CountUp>
+        />
       </div>
     </ScoreBoardContainer>
   );

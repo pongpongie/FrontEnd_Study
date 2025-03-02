@@ -10,7 +10,7 @@ import GraphBoard from "./GraphBoard";
 import ScoreBoard from "./ScoreBoard";
 
 const DashboardContainer = styled.div`
-  .error-info {
+  /* .error-info {
     border: 2px solid #f06;
     padding: 10px 30px;
     background-color: #fee;
@@ -26,7 +26,7 @@ const DashboardContainer = styled.div`
       margin: 0;
       margin-bottom: 10px;
     }
-  }
+  } */
 `;
 
 const Dashboard = memo(() => {

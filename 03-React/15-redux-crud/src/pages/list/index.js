@@ -134,7 +134,7 @@ const ProfessorList = memo(() => {
                   <td>{v.id}</td>
                   <td>
                     {!keyword ? (
-                      <Link to={`/view/${v.id}`}>{v.id} </Link>
+                      <Link to={`/view/${v.id}`}>{v.name} </Link>
                     ) : (
                       <Link
                         to={`/view/${v.id}`}

@@ -16,7 +16,9 @@ __metadata:
     next: "npm:15.2.1"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
+    react-loader-spinner: "npm:^6.1.6"
     styled-components: "npm:^6.1.15"
+    styled-components-breakpoints: "npm:^1.1.1"
   languageName: unknown
   linkType: soft
 
@@ -2907,6 +2909,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-is@npm:^18.2.0":
+  version: 18.3.1
+  resolution: "react-is@npm:18.3.1"
+  checksum: 10c0/f2f1e60010c683479e74c63f96b09fb41603527cd131a9959e2aee1e5a8b0caf270b365e5ca77d4a6b18aae659b60a86150bb3979073528877029b35aecd2072
+  languageName: node
+  linkType: hard
+
+"react-loader-spinner@npm:^6.1.6":
+  version: 6.1.6
+  resolution: "react-loader-spinner@npm:6.1.6"
+  dependencies:
+    react-is: "npm:^18.2.0"
+    styled-components: "npm:^6.1.2"
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 10c0/20d9d31b4cbd0720d8d9c818babbb9aaa430fe0adbbf85a90d585f7ac6bd1a338df9beb6c63f970de4d41c95ccd2cf2751e0842486e392fa7b0796c945535e43
+  languageName: node
+  linkType: hard
+
 "react@npm:^19.0.0":
   version: 19.0.0
   resolution: "react@npm:19.0.0"
@@ -3386,7 +3408,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-components@npm:^6.1.15":
+"styled-components-breakpoints@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "styled-components-breakpoints@npm:1.1.1"
+  peerDependencies:
+    styled-components: ">= 2.0.0 < 6.0.0"
+  checksum: 10c0/fd3f4f16a0aa02ecf07852c1e20502f0361e3c5822a032b10013d2bcfea0296e2428f97639b75213af6d6d1d9b90ea6b24f53eeee7d41b01e0b15585bfb9a4fc
+  languageName: node
+  linkType: hard
+
+"styled-components@npm:^6.1.15, styled-components@npm:^6.1.2":
   version: 6.1.15
   resolution: "styled-components@npm:6.1.15"
   dependencies:

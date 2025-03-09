@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+//import { NavLink } from "react-router-dom";
 import Link from "next/link";
 
 /** 메뉴링크 --> NavLink: 현재 머물고 있는 페이지와 관련된 링크에 CSS적용 */
+//const MenuLinkContainer = styled(NavLink)`
 const MenuLinkContainer = styled(Link)`
   font-size: 20px;
   cursor: pointer;
@@ -39,8 +41,9 @@ const MenuLinkContainer = styled(Link)`
   }
 `;
 
-const MenuLink = ({ to, children }) => (
-  <MenuLinkContainer to={to}>{children}</MenuLinkContainer>
+//const MenuLink = ({to, children}) => <MenuLinkContainer href={to}>{children}</MenuLinkContainer>;
+const MenuLink = ({ href, children }) => (
+  <MenuLinkContainer href={href}>{children}</MenuLinkContainer>
 );
 
 export default MenuLink;

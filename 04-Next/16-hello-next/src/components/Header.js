@@ -31,6 +31,8 @@ const Header = memo(() => {
         <MenuLink href="/product">전체상품</MenuLink>
         <MenuLink href="/product/man">남성의류</MenuLink>
         <MenuLink href="/product/woman">여성의류</MenuLink>
+
+        <MenuLink href="/traffic_acc">교통사고현황</MenuLink>
       </nav>
     </HeaderContainer>
   );

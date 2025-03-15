@@ -7,17 +7,23 @@ import GlobalStyle from "@/components/GlobalStyles";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+import wrapper from "@/slices/_store";
+import { Provider } from "react-redux";
+
 const App = ({ Component, pageProps }) => {
+  const { store } = wrapper.useWrappedStore(pageProps);
+
   return (
-    <>
+    <Provider store={store}>
       <Meta />
       <GlobalStyle />
+
       <Header />
 
       <Component {...pageProps} />
 
       <Footer />
-    </>
+    </Provider>
   );
 };
 

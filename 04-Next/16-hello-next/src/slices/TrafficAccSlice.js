@@ -1,10 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-
 import axiosHelper from "../helpers/AxiosHelper";
-
 import reduxHelper from "../helpers/ReduxHelper";
 
-const API_URL = "http://localhost:8080/traffic_acc";
+const API_URL = "/traffic_acc";
 
 export const getList = createAsyncThunk(
   "TrafficAccSlice/getList",

@@ -24,6 +24,13 @@ const Header = memo(() => {
 
         <MenuLink href="/params/hello?num1=100&num2=200">Hello</MenuLink>
         <MenuLink href="/params/world?num1=300&num2=400">World</MenuLink>
+
+        <MenuLink href="/path/foo">Path(foo)</MenuLink>
+        <MenuLink href="/path/bar">Path(bar)</MenuLink>
+
+        <MenuLink href="/product">전체상품</MenuLink>
+        <MenuLink href="/product/man">남성의류</MenuLink>
+        <MenuLink href="/product/woman">여성의류</MenuLink>
       </nav>
     </HeaderContainer>
   );

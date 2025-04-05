@@ -17,11 +17,11 @@ import sample from "../assets/img/sample.jpg";
  * @returns {JSX.Element}
  */
 const Meta = ({
-  title = "16-hello-react",
-  description = "16-hello-react 예제 입니다.",
-  author = "호쌤",
+  title = "uniqlo",
+  description = "uniqlo project",
+  author = "pongpongi",
   subject = "Next.js Frontend Programming",
-  copyright = "Lee K.H",
+  copyright = "Si hyun Lee",
   keywords = "Next.js",
   url = null,
   image = sample,
